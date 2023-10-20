@@ -1,6 +1,5 @@
 //just call the function hideGridAlternatives();
-//specify what alternatives for what grid subquestions to hide on griditems with css-classes like hideRow4Alt5
-
+//css-classes on grids like hideRow4Alt5 will hide answer alternative 5 on question row 4
 
 
 function hideGridAlternatives() {
