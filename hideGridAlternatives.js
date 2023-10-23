@@ -1,6 +1,5 @@
-//just call the function hideGridAlternatives();
 //css-classes on grids like hideRow4Alt5 will hide answer alternative 5 on question row 4
-
+//call the function hideGridAlternatives();
 
 function hideGridAlternatives() {
 	const hideRowNodeList = document.querySelectorAll("[class*='hideRow']");
