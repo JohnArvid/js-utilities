@@ -12,8 +12,8 @@ function hideGridAlternatives() {
 		//iterate over nodelist	
 		let classesArray = [];
 		for (const entry of hideRowNodeList.entries()) {
-		    classesArray.push(Array.from(entry[1].classList).filter( item => item.indexOf("hideRow") !== -1));    
-		}
+		    classesArray.push(Array.from(entry[1].classList).filter( item => item.indexOf("hideRow") !== -1));
+		  }
 		return classesArray;
 	}
 
