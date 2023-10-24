@@ -2,16 +2,16 @@
 //call the function hideGridAlternatives();
 
 function hideGridAlternatives() {
-	const hideRowNodeList = document.querySelectorAll("[class*='hideRow']");
-	const actualElementIds = fullIdArray( mapQsAndClasses( getQidsFromHideRowNodeList(), getAllHideRowClassesForQids() ) );
+	const hideRowElements = document.querySelectorAll("[class*='hideRow']");
+	const elementIdsToHide = fullIdArray( mapQsAndClasses( getQidsFromHideRowNodeList(), getAllHideRowClassesForQids() ) );
 	
-	actualElementIds.forEach( removeElement );
+	elementIdsToHide.forEach( removeElement );
 
 
 	function getAllHideRowClassesForQids() {
 		//iterate over nodelist	
 		let classesArray = [];
-		for (const entry of hideRowNodeList.entries()) {
+		for (const entry of hideRowElements.entries()) {
 		    classesArray.push(Array.from(entry[1].classList).filter( item => item.indexOf("hideRow") !== -1));
 		  }
 		return classesArray;
@@ -21,7 +21,7 @@ function hideGridAlternatives() {
 
 	//array of IDs with hideRow classes
 	function getQidsFromHideRowNodeList() {
-		let questionIds = Array.from(hideRowNodeList).map( (element) => {
+		let questionIds = Array.from(hideRowElements).map( (element) => {
 			id = element.children[0].innerHTML;
 			if (id[id.length - 1] === "*") {
 				id = id.slice(0, id.length -1);
