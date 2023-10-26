@@ -4,3 +4,8 @@ function unique(arr) {
   //Gets only the LAST occurence of any value in arr.
   return arr.filter( (item, index) => arr.indexOf(item, index + 1) == -1);
 }
+
+//another variant, making use of set
+function uniqueBySet(arr){
+  return Array.from(new Set(arr));
+}
