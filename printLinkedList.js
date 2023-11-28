@@ -5,9 +5,9 @@ function printLinkedList(list) {
     }
 }
 
-function printListReverse(list) {
+function printLinkedListReverse(list) {
     if (list.next) {
-        printListReverse(list.next);
+        printLinkedListReverse(list.next);
     }
 
     console.log(list.value);
