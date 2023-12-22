@@ -1,3 +1,32 @@
+
+let wakeLock = null;
+
+const requestWakeLock = async () => {
+  try {
+    wakeLock = await navigator.wakeLock.request();
+    wakeLock.addEventListener('release', () => {
+      console.log('Screen Wake Lock released:', wakeLock.released, 'at ', new Date(Date.now()));
+    });
+    console.log('Screen Wake Lock released:', wakeLock.released, 'at ', new Date(Date.now()));
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+};
+
+await requestWakeLock();
+
+//Release lock after 5 s
+/*
+window.setTimeout(() => {
+  wakeLock.release();
+  wakeLock = null;
+}, 5000);
+
+*/
+
+
+
+/*
 const intervalID = setInterval(myCallback, 1000 * 60);
 const button = document.createElement('button');
 document.body.appendChild(button);
@@ -9,11 +38,11 @@ function myCallback() {
 function clickHandler() {
   console.log("idle");
 }
+*/
 
 
 
-
-//rewrite with wakelock
+/*
 console.log("Loaded at " + new Date(Date.now()));
 const intervalID = setInterval(myCallback, 1000 * 60);
 const root = document.getElementById('root');
@@ -25,3 +54,4 @@ function myCallback() {
 function clickHandler() {
   location.reload();
 }
+*/
