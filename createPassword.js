@@ -1,4 +1,4 @@
-function createPassword() {
+export default function createPassword() {
     let sequence = function() {
         return Math.round(Math.random() * 100_000_000).toString(36)
     };
