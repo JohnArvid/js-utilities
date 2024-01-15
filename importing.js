@@ -1,3 +1,3 @@
-import passwordMaker from './createPassword.js';
+import makePassword from './createPassword.js';
 
-console.log(passwordMaker());
+console.log(makePassword());
