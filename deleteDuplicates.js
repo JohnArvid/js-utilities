@@ -6,6 +6,6 @@ function unique(arr) {
 }
 
 //another variant, making use of set
-function uniqueBySet(arr){
+export default function uniqueBySet(arr){
   return Array.from(new Set(arr));
 }
