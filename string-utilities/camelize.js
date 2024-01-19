@@ -1,4 +1,4 @@
-function camelize(str) {
+export default function camelize(str) {
     let arr = str.split("-");
     arr = arr.map( (item, index) => {
         if (index === 0) return item;
