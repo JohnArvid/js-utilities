@@ -8,8 +8,10 @@ console.log(makePassword());
 console.log(unique([1, 2, 2, 3, 4, 4, 5]));
 lock();
 console.log( isEmptyObj(123) );
-console.log(isPalindrome('Anna'));
+console.log('Is Anna a palindrome? ', isPalindrome('Anna'));
 console.log(reverseString('Backwards'));
-console.log(counter.increment());
+console.log('counter says: ', counter.increment());
+console.log('counter says: ', counter.increment());
+console.log('counter says: ', counter.reset());
 
 
